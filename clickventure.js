@@ -15,6 +15,7 @@ var ClickOption = React.createClass({
       <div className="click-option"
            onClick={this.handleClick}>
         {this.props.text}
+        &#8594;
       </div>
     );
   }
