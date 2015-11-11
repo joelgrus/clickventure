@@ -1,0 +1,24 @@
+nodes :
+  - key : "start"
+    text : "The starting node!"
+    image :
+      uri : "images/start.jpg"
+    choices :
+      - text : "option a"
+        targetKey : "a"
+      - text : "option b"
+        targetKey : "b"
+      - text : "option c"
+        targetKey : "c"
+  - key : "a"
+    text : "End node a"
+    image :
+      uri : "images/end_node_a.jpg"
+  - key : "b"
+    text : "End node b"
+    image :
+      uri : "images/end_node_b.jpg"
+  - key : "c"
+    text : "End node c"
+    image :
+      uri : "images/end_node_c.jpg"

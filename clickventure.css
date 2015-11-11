@@ -1,0 +1,9 @@
+div.click-option {
+  color: maroon;
+  cursor: pointer;
+}
+
+div.back-to-start {
+  color: red;
+  cursor: pointer;
+}
