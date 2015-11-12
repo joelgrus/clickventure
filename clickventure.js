@@ -7,16 +7,15 @@
  */
 var ClickOption = React.createClass({
   handleClick: function(event) {
-    console.log(this);
     this.props.onChoice(this.props.targetKey);
   },
   render: function() {
     return (
-      <div className="click-option"
+      <button className="click-option"
            onClick={this.handleClick}>
         {this.props.text}
         &#8594;
-      </div>
+      </button>
     );
   }
 });
@@ -50,7 +49,7 @@ var ClickOptions = React.createClass({
       return (
         <div>
           <div className="the-end">THE END</div>
-          <div className="back-to-start" onClick={backToStart}>back to start</div>
+          <button className="warning back-to-start" onClick={backToStart}>back to start</button>
         </div>
       );
     }
@@ -75,6 +74,7 @@ var Node = React.createClass({
   },
   render: function() {
     var node = nodes[this.state.key];
+    console.log(node);
     return (
       <div className="node">
         <img src={node.image.uri} />
@@ -86,13 +86,26 @@ var Node = React.createClass({
   }
 });
 
+var Title = React.createClass({
+  render: function() {
+    return (
+      <div><h1>{this.props.title}</h1></div>
+    );
+  }
+});
+
 $.get("data.yaml", function(text) {
+  console.log(text);
   var data = jsyaml.safeLoad(text);
+  console.log(data);
   data.nodes.forEach(function(node){
     nodes[node.key] = node;
   });
   ReactDOM.render(
-    <Node />,
+    (<div>
+       <Title title={data.title || ClickVenture} />
+       <Node />
+     </div>),
     document.getElementById('content')
   );
 });

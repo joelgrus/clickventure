@@ -1,21 +1,20 @@
-div.click-option {
+button.click-option {
   float: left;
   clear: both;
-  color: #3a3a3a;
   padding: 15px;
   margin: 5px;
-  background-color: #f4f4f4;
   position: relative;
-  cursor: pointer;
 }
 
 div.back-to-start {
   float: left;
   clear: both;
-  color: red;
   padding: 15px;
   margin: 5px;
-  background-color: #f4f4f4;
   position: relative;
-  cursor: pointer;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
 }

@@ -1,3 +1,4 @@
+title : ClickVenture
 nodes :
   - key : "start"
     text : "The starting node!"
