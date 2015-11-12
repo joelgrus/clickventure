@@ -103,7 +103,7 @@ $.get("data.yaml", function(text) {
   });
   ReactDOM.render(
     (<div>
-       <Title title={data.title || ClickVenture} />
+       <Title title={data.title || "ClickVenture"} />
        <Node />
      </div>),
     document.getElementById('content')
